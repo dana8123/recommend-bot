@@ -5,3 +5,10 @@
 ### stack
 
 `python3`
+
+### todo
+
+- [x] slack bot link
+- [x] menu data csv
+- [x] random function
+- [ ] crontab
