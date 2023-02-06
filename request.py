@@ -5,16 +5,19 @@ import random
 from dotenv import load_dotenv
 
 load_dotenv()
-TOKEN = os.getenv('TOKEN')
-CHANNEL = os.getenv('CHANNEL')
+
+TOKEN = os.environ['TOKEN']
+CHANNEL = os.environ['CHANNEL']
+
+print(CHANNEL, TOKEN)
 
 def post_message(token, channel, answer):
     response = requests.post("https://slack.com/api/chat.postMessage",
-        headers={"Authorization": "Bearer "+token},
-        data={"channel": channel,"text": answer}
+        headers={"Authorization": "Bearer "+str(token)},
+        data={"channel": str(channel),"text": str(answer)}
     )
 
-    print(response)
+    print(str(channel) + '로 전송 완료')
 randomNum = random.randrange(0,15)
 recommend = getMenu(randomNum)
 menu = recommend['menu']
