@@ -9,10 +9,8 @@ load_dotenv()
 
 BOTTOKEN = os.environ['TOKEN']
 APPTOKEN = os.environ['APPTOKEN']
-LIMITNUM = os.environ['LIMITNUM']
 
-randomNum = random.randrange(0,int(LIMITNUM))
-recommend = getMenu(randomNum)
+recommend = getMenu()
 menu = recommend['menu']
 name = recommend['name']
 

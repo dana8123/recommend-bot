@@ -18,7 +18,7 @@ def post_message(token, channel, answer):
     )
 
     print(str(channel) + '로 전송 완료')
-randomNum = random.randrange(0,15)
+randomNum = random.randrange(0,29)
 recommend = getMenu(randomNum)
 menu = recommend['menu']
 name = recommend['name']
